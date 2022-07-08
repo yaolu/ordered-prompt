@@ -1,0 +1,11 @@
+train_data_path: "data/cb/train.jsonl"
+test_data_path: "data/cb/dev_subsample.jsonl"
+tokenizer_path: "distilgpt2"
+n_shot: 4
+label_mapping: {'contradiction': 'false', 'entailment': 'true', 'neutral': 'neither'}
+corpus_params: {'sentence_1_str': 'premise', 'sentence_2_str': 'hypothesis', 'label_str': 'label'}
+template: "f'premise: {sentence_1}\\nhypothesis: {sentence_2}\\nprediction: {label_text}\\n\\n'"
+sample_mode: "balance"
+sentence_pair: True
+permutation_max_size: 24
+

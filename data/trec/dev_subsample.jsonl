@@ -1,0 +1,256 @@
+{"sentence": "What is bipolar disorder ?", "label": "0"}
+{"sentence": "What is Shakespeare 's nickname ?", "label": "3"}
+{"sentence": "What state has the least amount of rain per year ?", "label": "4"}
+{"sentence": "What is a mirror made out of ?", "label": "1"}
+{"sentence": "How many hearts does an octopus have ?", "label": "5"}
+{"sentence": "What peninsula is Spain part of ?", "label": "4"}
+{"sentence": "What year did WWII begin ?", "label": "5"}
+{"sentence": "What color is a poison arrow frog ?", "label": "1"}
+{"sentence": "What is the population of Venezuela ?", "label": "5"}
+{"sentence": "Who was the first US President to ride in an automobile to his inauguration ?", "label": "3"}
+{"sentence": "What are Quaaludes ?", "label": "0"}
+{"sentence": "What is the deepest lake in the US ?", "label": "4"}
+{"sentence": "What monastery was raided by Vikings in the late eighth century ?", "label": "1"}
+{"sentence": "What is a thyroid ?", "label": "0"}
+{"sentence": "What is pectin ?", "label": "0"}
+{"sentence": "What are pathogens ?", "label": "0"}
+{"sentence": "What is the brightest star ?", "label": "4"}
+{"sentence": "What is the depth of the Nile river ?", "label": "5"}
+{"sentence": "What is the statue of liberty made of ?", "label": "1"}
+{"sentence": "Where is the Mall of the America ?", "label": "4"}
+{"sentence": "Where is John Wayne airport ?", "label": "4"}
+{"sentence": "Who killed John F. Kennedy ?", "label": "3"}
+{"sentence": "What was the last year that the Chicago Cubs won the World Series ?", "label": "5"}
+{"sentence": "Where was the first golf course in the United States ?", "label": "4"}
+{"sentence": "\"What river runs through Rowe , Italy ?\"", "label": "4"}
+{"sentence": "What year was the Mona Lisa painted ?", "label": "5"}
+{"sentence": "What year did Mussolini seize power in Italy ?", "label": "5"}
+{"sentence": "What is done with worn or outdated flags ?", "label": "0"}
+{"sentence": "What is the conversion rate between dollars and pounds ?", "label": "5"}
+{"sentence": "What year did the Milwaukee Braves become the Atlanta Braves ?", "label": "5"}
+{"sentence": "What is the population of Australia ?", "label": "5"}
+{"sentence": "What French province is cognac produced in ?", "label": "4"}
+{"sentence": "What year did the Titanic start on its journey ?", "label": "5"}
+{"sentence": "What was J.F.K. 's wife 's name ?", "label": "3"}
+{"sentence": "What is pastrami made of ?", "label": "1"}
+{"sentence": "What does target heart rate mean ?", "label": "0"}
+{"sentence": "What is acid rain ?", "label": "0"}
+{"sentence": "When was the first kidney transplant ?", "label": "5"}
+{"sentence": "What do you call a newborn kangaroo ?", "label": "1"}
+{"sentence": "How many pounds in a ton ?", "label": "5"}
+{"sentence": "How old was Joan of Arc when she died ?", "label": "5"}
+{"sentence": "What are amphibians ?", "label": "0"}
+{"sentence": "What year did the Titanic sink ?", "label": "5"}
+{"sentence": "What is the percentage of water content in the human body ?", "label": "5"}
+{"sentence": "What is Australia 's national flower ?", "label": "1"}
+{"sentence": "What does the acronym NASA stand for ?", "label": "2"}
+{"sentence": "When did John F. Kennedy get elected as President ?", "label": "5"}
+{"sentence": "Who was Abraham Lincoln ?", "label": "3"}
+{"sentence": "How old was Elvis Presley when he died ?", "label": "5"}
+{"sentence": "What is foot and mouth disease ?", "label": "1"}
+{"sentence": "When was the first liver transplant ?", "label": "5"}
+{"sentence": "What is the Illinois state flower ?", "label": "1"}
+{"sentence": "How much does the human adult female brain weigh ?", "label": "5"}
+{"sentence": "What is the chunnel ?", "label": "0"}
+{"sentence": "What is the heaviest naturally occurring element ?", "label": "1"}
+{"sentence": "What year did the Andy Griffith show begin ?", "label": "5"}
+{"sentence": "What does NASA stand for ?", "label": "2"}
+{"sentence": "What is angiotensin ?", "label": "0"}
+{"sentence": "What is the longest major league baseball-winning streak ?", "label": "1"}
+{"sentence": "When is the summer solstice ?", "label": "5"}
+{"sentence": "How do you measure earthquakes ?", "label": "0"}
+{"sentence": "What is nuclear power ?", "label": "0"}
+{"sentence": "What is the speed of light ?", "label": "5"}
+{"sentence": "What is die-casting ?", "label": "0"}
+{"sentence": "\"What is the murder rate in Windsor , Ontario ?\"", "label": "5"}
+{"sentence": "When was Hiroshima bombed ?", "label": "5"}
+{"sentence": "What is the smallest bird in Britain ?", "label": "1"}
+{"sentence": "Who was the first American to walk in space ?", "label": "3"}
+{"sentence": "\"What county is Phoenix , AZ in ?\"", "label": "4"}
+{"sentence": "What is the name given to the Tiger at Louisiana State University ?", "label": "1"}
+{"sentence": "What is a carcinogen ?", "label": "0"}
+{"sentence": "What is the atomic weight of silver ?", "label": "5"}
+{"sentence": "What is Muscular Dystrophy ?", "label": "0"}
+{"sentence": "What is the oldest university in the US ?", "label": "3"}
+{"sentence": "What is influenza ?", "label": "0"}
+{"sentence": "What is a thermometer ?", "label": "0"}
+{"sentence": "Who was elected president of South Africa in 1994 ?", "label": "3"}
+{"sentence": "What date was Dwight D. Eisenhower born ?", "label": "5"}
+{"sentence": "What is New York 's state bird ?", "label": "1"}
+{"sentence": "What are capers ?", "label": "0"}
+{"sentence": "What color is a giraffe 's tongue ?", "label": "1"}
+{"sentence": "Where is the Grand Canyon ?", "label": "4"}
+{"sentence": "What is another astronomic term for the Northern Lights ?", "label": "1"}
+{"sentence": "When is the official first day of summer ?", "label": "5"}
+{"sentence": "When did Elvis Presley die ?", "label": "5"}
+{"sentence": "What is a baby turkey called ?", "label": "1"}
+{"sentence": "What does I.V. stand for ?", "label": "2"}
+{"sentence": "What is the length of the coastline of the state of Alaska ?", "label": "5"}
+{"sentence": "What is quicksilver ?", "label": "0"}
+{"sentence": "What date did Neil Armstrong land on the moon ?", "label": "5"}
+{"sentence": "What is an obtuse angle ?", "label": "0"}
+{"sentence": "What is poliomyelitis ?", "label": "0"}
+{"sentence": "What are semiconductors ?", "label": "0"}
+{"sentence": "What is the average speed of the horses at the Kentucky Derby ?", "label": "5"}
+{"sentence": "What is fungus ?", "label": "0"}
+{"sentence": "Who was the 22nd President of the US ?", "label": "3"}
+{"sentence": "What is a tsunami ?", "label": "0"}
+{"sentence": "What province is Montreal in ?", "label": "4"}
+{"sentence": "What is the abbreviation for Texas ?", "label": "2"}
+{"sentence": "What country did Ponce de Leon come from ?", "label": "4"}
+{"sentence": "Who was president in 1913 ?", "label": "3"}
+{"sentence": "What are sunspots ?", "label": "0"}
+{"sentence": "What is bangers and mash ?", "label": "0"}
+{"sentence": "What state is the geographic center of the lower 48 states ?", "label": "4"}
+{"sentence": "What is the largest city in the world ?", "label": "4"}
+{"sentence": "What is a panic disorder ?", "label": "0"}
+{"sentence": "What causes gray hair ?", "label": "0"}
+{"sentence": "What is the diameter of a golf ball ?", "label": "5"}
+{"sentence": "What is epilepsy ?", "label": "0"}
+{"sentence": "What is the capital of Ethiopia ?", "label": "4"}
+{"sentence": "How many liters in a gallon ?", "label": "5"}
+{"sentence": "What is an antigen ?", "label": "0"}
+{"sentence": "What is supernova ?", "label": "0"}
+{"sentence": "What mineral helps prevent osteoporosis ?", "label": "1"}
+{"sentence": "What imaginary line is halfway between the North and South Poles ?", "label": "4"}
+{"sentence": "How many Great Lakes are there ?", "label": "5"}
+{"sentence": "What is nanotechnology ?", "label": "0"}
+{"sentence": "What is the average body temperature ?", "label": "5"}
+{"sentence": "Which country has the most water pollution ?", "label": "4"}
+{"sentence": "Who invented the instant Polaroid camera ?", "label": "3"}
+{"sentence": "What year did the U.S. buy Alaska ?", "label": "5"}
+{"sentence": "What is Susan B. Anthony 's birthday ?", "label": "5"}
+{"sentence": "What does a defibrillator do ?", "label": "0"}
+{"sentence": "What does ciao mean ?", "label": "0"}
+{"sentence": "How fast is sound ?", "label": "5"}
+{"sentence": "What was President Lyndon Johnson 's reform program called ?", "label": "1"}
+{"sentence": "What is bio-diversity ?", "label": "0"}
+{"sentence": "What is the name of the satellite that the Soviet Union sent into space in 1957 ?", "label": "1"}
+{"sentence": "How often does Old Faithful erupt at Yellowstone National Park ?", "label": "5"}
+{"sentence": "When is hurricane season in the Caribbean ?", "label": "5"}
+{"sentence": "What was the first satellite to go into space ?", "label": "1"}
+{"sentence": "In what spacecraft did U.S. astronaut Alan Shepard make his historic 1961 flight ?", "label": "1"}
+{"sentence": "What is pneumonia ?", "label": "0"}
+{"sentence": "What does cc in engines mean ?", "label": "0"}
+{"sentence": "What is the location of Lake Champlain ?", "label": "4"}
+{"sentence": "During which season do most thunderstorms occur ?", "label": "5"}
+{"sentence": "What is the highest dam in the U.S. ?", "label": "4"}
+{"sentence": "How long is the Columbia River in miles ?", "label": "5"}
+{"sentence": "What are spider veins ?", "label": "0"}
+{"sentence": "Where is the volcano Olympus Mons located ?", "label": "4"}
+{"sentence": "What is the birthstone for June ?", "label": "1"}
+{"sentence": "When was the first stamp issued ?", "label": "5"}
+{"sentence": "What fruit is Melba sauce made from ?", "label": "1"}
+{"sentence": "How fast is the speed of light ?", "label": "5"}
+{"sentence": "What gasses are in the troposphere ?", "label": "1"}
+{"sentence": "What city has the zip code of 35824 ?", "label": "4"}
+{"sentence": "What is the most popular sport in Japan ?", "label": "1"}
+{"sentence": "How many Admirals are there in the U.S. Navy ?", "label": "5"}
+{"sentence": "What city had a world fair in 1900 ?", "label": "4"}
+{"sentence": "How fast is alcohol absorbed ?", "label": "5"}
+{"sentence": "What do bats eat ?", "label": "1"}
+{"sentence": "\"What chain store is headquartered in Bentonville , Arkansas ?\"", "label": "3"}
+{"sentence": "What is plastic made of ?", "label": "1"}
+{"sentence": "What is an eclipse ?", "label": "0"}
+{"sentence": "What are Aborigines ?", "label": "0"}
+{"sentence": "Which country gave New York the Statue of Liberty ?", "label": "4"}
+{"sentence": "What is peyote ?", "label": "0"}
+{"sentence": "How cold should a refrigerator be ?", "label": "5"}
+{"sentence": "How tall is the Sears Building ?", "label": "5"}
+{"sentence": "What day and month did John Lennon die ?", "label": "5"}
+{"sentence": "What body of water are the Canary Islands in ?", "label": "4"}
+{"sentence": "What is Valentine 's Day ?", "label": "0"}
+{"sentence": "What is compounded interest ?", "label": "0"}
+{"sentence": "What is the name of Roy Roger 's dog ?", "label": "1"}
+{"sentence": "Who was the 23rd president of the United States ?", "label": "3"}
+{"sentence": "What is sonar ?", "label": "0"}
+{"sentence": "What is the active ingredient in baking soda ?", "label": "1"}
+{"sentence": "What is the state flower of Michigan ?", "label": "1"}
+{"sentence": "Who discovered x-rays ?", "label": "3"}
+{"sentence": "When was the first Wal-Mart store opened ?", "label": "5"}
+{"sentence": "What strait separates North America from Asia ?", "label": "4"}
+{"sentence": "\"The sun 's core , what is the temperature ?\"", "label": "5"}
+{"sentence": "What does USPS stand for ?", "label": "2"}
+{"sentence": "When were William Shakespeare 's twins born ?", "label": "5"}
+{"sentence": "What is the effect of acid rain ?", "label": "0"}
+{"sentence": "What are the twin cities ?", "label": "4"}
+{"sentence": "Which president was unmarried ?", "label": "3"}
+{"sentence": "In the late 1700 's British convicts were used to populate which colony ?", "label": "4"}
+{"sentence": "What is Mardi Gras ?", "label": "0"}
+{"sentence": "What do you call a professional map drawer ?", "label": "1"}
+{"sentence": "Who wrote `` The Divine Comedy '' ?", "label": "3"}
+{"sentence": "What is the width of a football field ?", "label": "5"}
+{"sentence": "What does your spleen do ?", "label": "0"}
+{"sentence": "What are the two types of twins ?", "label": "1"}
+{"sentence": "What is the Milky Way ?", "label": "0"}
+{"sentence": "What is another name for vitamin B1 ?", "label": "1"}
+{"sentence": "What color are crickets ?", "label": "1"}
+{"sentence": "What does a barometer measure ?", "label": "1"}
+{"sentence": "What is naproxen ?", "label": "0"}
+{"sentence": "What is the most common eye color ?", "label": "1"}
+{"sentence": "The U.S. Department of Treasury first issued paper currency for the U.S. during which war ?", "label": "1"}
+{"sentence": "What is the Ohio state bird ?", "label": "1"}
+{"sentence": "What is the only artery that carries blue blood from the heart to the lungs ?", "label": "1"}
+{"sentence": "How did Janice Joplin die ?", "label": "0"}
+{"sentence": "Where is the Mason/Dixon line ?", "label": "4"}
+{"sentence": "What is the name of William Penn 's ship ?", "label": "1"}
+{"sentence": "How long did Rip Van Winkle sleep ?", "label": "5"}
+{"sentence": "When did Idaho become a state ?", "label": "5"}
+{"sentence": "What is the melting point of copper ?", "label": "5"}
+{"sentence": "What state did the Battle of Bighorn take place in ?", "label": "4"}
+{"sentence": "What are ethics ?", "label": "0"}
+{"sentence": "What is the longest bone in the human body ?", "label": "1"}
+{"sentence": "What does the technical term ISDN mean ?", "label": "2"}
+{"sentence": "How many feet in a mile ?", "label": "5"}
+{"sentence": "Who invented the slinky ?", "label": "3"}
+{"sentence": "What is leukemia ?", "label": "0"}
+{"sentence": "Who won Ms. American in 1989 ?", "label": "3"}
+{"sentence": "What are cigarettes made of ?", "label": "1"}
+{"sentence": "When was the telephone invented ?", "label": "5"}
+{"sentence": "What color is indigo ?", "label": "1"}
+{"sentence": "What currency is used in Algeria ?", "label": "1"}
+{"sentence": "What is amitriptyline ?", "label": "0"}
+{"sentence": "What color is yak milk ?", "label": "1"}
+{"sentence": "What city 's newspaper is called `` The Enquirer '' ?", "label": "4"}
+{"sentence": "What is the spirometer test ?", "label": "0"}
+{"sentence": "What are invertebrates ?", "label": "0"}
+{"sentence": "What is solar wind ?", "label": "0"}
+{"sentence": "Who discovered radium ?", "label": "3"}
+{"sentence": "For how long is an elephant pregnant ?", "label": "5"}
+{"sentence": "How far away is the moon ?", "label": "5"}
+{"sentence": "What are Canada 's two territories ?", "label": "4"}
+{"sentence": "What is the birthstone of October ?", "label": "1"}
+{"sentence": "How much was a ticket for the Titanic ?", "label": "5"}
+{"sentence": "What is dianetics ?", "label": "0"}
+{"sentence": "Material called linen is made from what plant ?", "label": "1"}
+{"sentence": "Who invented the telephone ?", "label": "3"}
+{"sentence": "Who wrote the hymn `` Amazing Grace '' ?", "label": "3"}
+{"sentence": "What is the criterion for being legally blind ?", "label": "1"}
+{"sentence": "What is the life expectancy of a dollar bill ?", "label": "5"}
+{"sentence": "What is carbon dioxide ?", "label": "0"}
+{"sentence": "Who was the first Prime Minister of Canada ?", "label": "3"}
+{"sentence": "What kind of dog was Toto in the Wizard of Oz ?", "label": "1"}
+{"sentence": "What is Teflon ?", "label": "0"}
+{"sentence": "What is rheumatoid arthritis ?", "label": "0"}
+{"sentence": "What is the National Park in Utah ?", "label": "4"}
+{"sentence": "Developing nations comprise what percentage of the world 's population ?", "label": "5"}
+{"sentence": "\"What is the electrical output in Madrid , Spain ?\"", "label": "1"}
+{"sentence": "What year did the NFL go on strike ?", "label": "5"}
+{"sentence": "What precious stone is a form of pure carbon ?", "label": "1"}
+{"sentence": "Who developed the vaccination against polio ?", "label": "3"}
+{"sentence": "Who was the first U.S. president to appear on TV ?", "label": "3"}
+{"sentence": "What did Edward Binney and Howard Smith invent in 1903 ?", "label": "1"}
+{"sentence": "What is mad cow disease ?", "label": "0"}
+{"sentence": "Where are the British crown jewels kept ?", "label": "4"}
+{"sentence": "Who is the tallest man in the world ?", "label": "3"}
+{"sentence": "When was Rosa Parks born ?", "label": "5"}
+{"sentence": "How far is it from Denver to Aspen ?", "label": "5"}
+{"sentence": "Where is Milan ?", "label": "4"}
+{"sentence": "Who invented the calculator ?", "label": "3"}
+{"sentence": "What is foreclosure ?", "label": "0"}
+{"sentence": "Who was the first person to reach the North Pole ?", "label": "3"}
+{"sentence": "What is semolina ?", "label": "0"}
+{"sentence": "What was the name of the plane Lindbergh flew solo across the Atlantic ?", "label": "1"}
+{"sentence": "What is schizophrenia ?", "label": "0"}
+{"sentence": "What are xerophytes ?", "label": "0"}
+{"sentence": "\"What river flows between Fargo , North Dakota and Moorhead , Minnesota ?\"", "label": "4"}

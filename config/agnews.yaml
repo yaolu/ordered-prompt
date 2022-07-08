@@ -1,0 +1,11 @@
+train_data_path: "data/agnews/train.jsonl"
+test_data_path: "data/agnews/dev_subsample.jsonl"
+tokenizer_path: "distilgpt2"
+n_shot: 1
+#1-World, 2-Sports, 3-Business, 4-Science/Tech, we remove science
+label_mapping: {'1': 'world', '2': 'sports', '3': 'business', '4': 'technology'}
+corpus_params: {'sentence_1_str': 'sentence', 'label_str': 'label'}
+template: "f'input: {sentence_1}\\ntype: {label_text}\\n\\n'"
+sample_mode: "balance"
+sentence_pair: False
+permutation_max_size: 24
