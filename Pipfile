@@ -10,8 +10,11 @@ torch = "*"
 tqdm = "*"
 numpy = "*"
 transformers = "*"
+ipython = "*"
+evaluate = "*"
+scipy = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.8"
