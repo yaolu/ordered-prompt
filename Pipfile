@@ -13,8 +13,10 @@ transformers = "*"
 ipython = "*"
 evaluate = "*"
 scipy = "*"
+scikit-learn = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.8"
