@@ -5,12 +5,14 @@ DATASET=rte
 LOGDIR=experiment/$DATASET;
 SAMPLE_MODE=balance
 
+DEVICE=6
+
 mkdir -p $LOGDIR
 
 for NSHOT in 4;
 do
 
-for MODEL in gpt2 gpt2-medium gpt2-large gpt2-xl;
+for MODEL in gpt2 gpt2-medium gpt2-large gpt2-xl gpt-neo-125M gpt-neo-1.3B gpt-neo-2.7B;
 do
 for SEED in 3 5;
 do
@@ -19,11 +21,11 @@ do
   do
      python main.py --config config/$DATASET.yaml \
      --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED \
-     --ngram $N --generate --temperature 0.2 --topk 20 --do_sample
+     --ngram $N --generate --temperature 0.2 --topk 20 --do_sample --device $DEVICE
 
      echo "python main.py --config config/$DATASET.yaml \
      --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED \
-     --ngram $N --generate --temperature 0.2 --topk 20 --do_sample"
+     --ngram $N --generate --temperature 0.2 --topk 20 --do_sample --device $DEVICE"
   done;
 
   cd $LOGDIR;
@@ -43,14 +45,14 @@ do
   cd "${MAIN_DIR}" || exit;
 
   echo "python main.py --config config/$DATASET.yaml \
-     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED --test_data_path $LOGDIR/$OUTPUT;"
+     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED --test_data_path $LOGDIR/$OUTPUT --device $DEVICE;"
 
   python main.py --config config/$DATASET.yaml \
-     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED --test_data_path $LOGDIR/$OUTPUT
+     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED --test_data_path $LOGDIR/$OUTPUT --device $DEVICE
 
   mv $LOGDIR/${DATASET}_${NSHOT}_shot_${MODEL}_seed${SEED}_*.pkl $LOGDIR/fake_${DATASET}_${NSHOT}_shot_${MODEL}_seed${SEED}.pkl
   python main.py --config config/$DATASET.yaml \
-     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED
+     --nshot $NSHOT --model $MODEL --output $LOGDIR --seed $SEED --device $DEVICE
   mv $LOGDIR/${DATASET}_${NSHOT}_shot_${MODEL}_seed${SEED}_*.pkl $LOGDIR/true_${DATASET}_${NSHOT}_shot_${MODEL}_seed${SEED}.pkl
 
   python entropy.py --true $LOGDIR/true_${DATASET}_${NSHOT}_shot_${MODEL}_seed${SEED}.pkl \

@@ -27,7 +27,10 @@ logger = logging.getLogger(__name__)
 def init_model(args):
     model = ImmutableLM(args.model)
     if torch.cuda.is_available():
-        model.cuda()
+        device_count = torch.cuda.device_count()
+        device = args.device
+        if device != None and device < device_count:
+            model.cuda(device) # Use the last GPU
     return model
 
 def inference_mode(model: ImmutableLM, dataset: DataLoader, restricted_token):
@@ -70,6 +73,10 @@ def get_config_hash(cfg):
 def main(corpus_config, args):
 
     cfg = easydict.EasyDict(corpus_config)
+
+    if 'gpt2' not in args.model:
+        cfg.tokenizer_path = args.model
+
     print(cfg)
     corpus = PromptCorpus(**cfg)
 
@@ -116,6 +123,7 @@ if __name__ == '__main__':
     parser.add_argument("--do_sample", action="store_true")
     parser.add_argument("--topk", type=int, default=-1)
     parser.add_argument("--train_sample_mode", type=str, default="")
+    parser.add_argument("--device", type=int, default=0)
 
     args = parser.parse_args()
     print(args)

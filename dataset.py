@@ -7,7 +7,7 @@ import argparse
 import logging
 
 from collections import defaultdict
-from transformers import GPT2Tokenizer
+from transformers import GPT2Tokenizer, AutoTokenizer
 from torch.utils.data import DataLoader
 from model import ImmutableLM
 from tqdm import tqdm
@@ -29,7 +29,13 @@ class PromptCorpus:
                  corpus_params={"sentence_1_string": "", "sentence_2_string": "", "label_string": ""},
                  template="f'Review: {sentence_1}\nSentiment: {label_text}\n\n'",
                  sample_mode="balance", permutation_max_size=24, sentence_pair=False):
-        self.tokenizer = GPT2Tokenizer.from_pretrained(tokenizer_path)
+
+        if 'gpt2' in tokenizer_path:
+            self.tokenizer = GPT2Tokenizer.from_pretrained(tokenizer_path)
+        else:
+            if 'gpt-neo-' in tokenizer_path:
+                prefix = 'EleutherAI/'
+            self.tokenizer = AutoTokenizer.from_pretrained(prefix+tokenizer_path)
         self.kshot = n_shot
         self.max_sequence_length = 1022
 

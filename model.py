@@ -2,15 +2,25 @@ import torch
 import torch.nn as nn
 import numpy as np
 from tqdm import tqdm
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, GPT2Model
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 class ImmutableLM(nn.Module):
     def __init__(self, model_path):
         super(ImmutableLM, self).__init__()
-        self.backbone = GPT2LMHeadModel.from_pretrained(model_path)
-        self.tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-        self.backbone_name = model_path
+
+        if ('gpt-2' in model_path) or ('gpt2' in model_path):
+            self.backbone = GPT2LMHeadModel.from_pretrained(model_path)
+            self.tokenizer = GPT2Tokenizer.from_pretrained(model_path)
+            self.backbone_name = model_path
+        else:
+            if 'gpt-neo-' in model_path:
+                prefix = 'EleutherAI/'
+
+            self.backbone = AutoModelForCausalLM.from_pretrained(prefix + model_path)
+            self.tokenizer = AutoTokenizer.from_pretrained(prefix + model_path)
+            self.backbone_name = model_path.split('/')[-1]
 
     def get_restricted_token_probability(self, logits, restricted_token, label_length=1, normalize=False):
         prob_dist = logits[:, -label_length:, :].squeeze().softmax(-1)
