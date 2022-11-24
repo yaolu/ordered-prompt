@@ -7,20 +7,24 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 class ImmutableLM(nn.Module):
-    def __init__(self, model_path):
+    def __init__(self, model_name):
         super(ImmutableLM, self).__init__()
 
-        if ('gpt-2' in model_path) or ('gpt2' in model_path):
-            self.backbone = GPT2LMHeadModel.from_pretrained(model_path)
-            self.tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-            self.backbone_name = model_path
-        else:
-            if 'gpt-neo-' in model_path:
-                prefix = 'EleutherAI/'
+        self.backbone_name = model_name
 
-            self.backbone = AutoModelForCausalLM.from_pretrained(prefix + model_path)
-            self.tokenizer = AutoTokenizer.from_pretrained(prefix + model_path)
-            self.backbone_name = model_path.split('/')[-1]
+        if ('gpt-2' in model_name) or ('gpt2' in model_name):
+            self.backbone = GPT2LMHeadModel.from_pretrained(model_name)
+            self.tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+        else:
+            prefix = 'EleutherAI' if 'gpt-neo-' in model_name else ''
+            model_path = prefix + '/' + model_name
+            # self.backbone = AutoModelForCausalLM.from_pretrained(prefix + model_path)
+
+            max_memory_mapping = {0: "47B"}.update({i: "48GB" for i in range(1,8)})
+            self.backbone = AutoModelForCausalLM.from_pretrained(
+                model_path, device_map="auto", load_in_8bit=True, max_memory=max_memory_mapping
+            )
+            self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
     def get_restricted_token_probability(self, logits, restricted_token, label_length=1, normalize=False):
         prob_dist = logits[:, -label_length:, :].squeeze().softmax(-1)

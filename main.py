@@ -26,11 +26,11 @@ logger = logging.getLogger(__name__)
 
 def init_model(args):
     model = ImmutableLM(args.model)
-    if torch.cuda.is_available():
-        device_count = torch.cuda.device_count()
-        device = args.device
-        if device != None and device < device_count:
-            model.cuda(device) # Use the last GPU
+    # if torch.cuda.is_available():
+    #     device_count = torch.cuda.device_count()
+    #     device = args.device
+    #     if device != None and device < device_count:
+    #         model.cuda(device) # Use the last GPU
     return model
 
 def inference_mode(model: ImmutableLM, dataset: DataLoader, restricted_token):
