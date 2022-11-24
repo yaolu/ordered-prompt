@@ -35,6 +35,8 @@ class PromptCorpus:
         else:
             if 'gpt-neo-' in tokenizer_path:
                 prefix = 'EleutherAI/'
+            else:
+                prefix = ''
             self.tokenizer = AutoTokenizer.from_pretrained(prefix+tokenizer_path)
         self.kshot = n_shot
         self.max_sequence_length = 1022
