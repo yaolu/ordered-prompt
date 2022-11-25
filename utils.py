@@ -5,6 +5,12 @@ import torch.nn.functional as F
 from string import printable
 from collections import defaultdict
 
+def get_model_prefix(model_name):
+    if 'gpt2' in model_name:
+        return ''
+    else:
+        return 'EleutherAI/'
+
 def compute_acc(prediction, gtruth):
     correct_counter = 0
     for p, g in zip(prediction, gtruth):

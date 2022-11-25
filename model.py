@@ -2,31 +2,21 @@ import torch
 import torch.nn as nn
 import numpy as np
 from tqdm import tqdm
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from utils import get_model_prefix
 
 class ImmutableLM(nn.Module):
     def __init__(self, model_name):
         super(ImmutableLM, self).__init__()
 
-        GPU_MAX_RAM_GB = 48
+        prefix = get_model_prefix(model_name)
+        model_path = prefix + model_name
+        print('model_path', model_path)
 
+        self.backbone = AutoModelForCausalLM.from_pretrained(model_path, device_map='auto')
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.backbone_name = model_name
-        max_memory_mapping = {0: f"{int(GPU_MAX_RAM_GB*0.7)}GB"}.update({i: f"{GPU_MAX_RAM_GB}GB" for i in range(1,8)})
-
-        if ('gpt-2' in model_name) or ('gpt2' in model_name):
-            self.backbone = GPT2LMHeadModel.from_pretrained(model_name, device_map="auto", max_memory=max_memory_mapping)
-            self.tokenizer = GPT2Tokenizer.from_pretrained(model_name, device_map="auto", max_memory=max_memory_mapping)
-        else:
-            prefix = 'EleutherAI' if 'gpt-neo-' in model_name else ''
-            model_path = prefix + '/' + model_name
-            # self.backbone = AutoModelForCausalLM.from_pretrained(prefix + model_path)
-
-            self.backbone = AutoModelForCausalLM.from_pretrained(
-                model_path, device_map="auto", load_in_8bit=False, max_memory=max_memory_mapping
-            )
-            self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
     def get_restricted_token_probability(self, logits, restricted_token, label_length=1, normalize=False):
         prob_dist = logits[:, -label_length:, :].squeeze().softmax(-1)
