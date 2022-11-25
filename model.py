@@ -2,15 +2,21 @@ import torch
 import torch.nn as nn
 import numpy as np
 from tqdm import tqdm
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, GPT2Model
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from utils import get_model_prefix
 
 class ImmutableLM(nn.Module):
-    def __init__(self, model_path):
+    def __init__(self, model_name):
         super(ImmutableLM, self).__init__()
-        self.backbone = GPT2LMHeadModel.from_pretrained(model_path)
-        self.tokenizer = GPT2Tokenizer.from_pretrained(model_path)
-        self.backbone_name = model_path
+
+        prefix = get_model_prefix(model_name)
+        model_path = prefix + model_name
+        print('model_path', model_path)
+
+        self.backbone = AutoModelForCausalLM.from_pretrained(model_path, device_map='auto')
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        self.backbone_name = model_name
 
     def get_restricted_token_probability(self, logits, restricted_token, label_length=1, normalize=False):
         prob_dist = logits[:, -label_length:, :].squeeze().softmax(-1)
