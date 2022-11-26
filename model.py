@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from utils import get_model_prefix
+from utils import get_model_prefix, get_model_tokenizer
 
 class ImmutableLM(nn.Module):
     def __init__(self, model_name):
@@ -14,9 +14,22 @@ class ImmutableLM(nn.Module):
         model_path = prefix + model_name
         print('model_path', model_path)
 
-        self.backbone = AutoModelForCausalLM.from_pretrained(model_path, device_map='auto')
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        max_memory_mapping={
+            0: "1GB", 1: "40GB", 2: "40GB", 3: "40GB", 4: "40GB", 5: "40GB", 6: "40GB", 7: "40GB"
+        }
+
+        self.backbone = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            device_map='balanced_low_0',
+            max_memory=max_memory_mapping,
+            load_in_8bit=True,
+        )
+        tokenizer = get_model_tokenizer(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer)
         self.backbone_name = model_name
+
+        print('self.backbone.hf_device_map', self.backbone.hf_device_map)
+
 
     def get_restricted_token_probability(self, logits, restricted_token, label_length=1, normalize=False):
         prob_dist = logits[:, -label_length:, :].squeeze().softmax(-1)
@@ -119,15 +132,16 @@ class ImmutableLM(nn.Module):
         # if allowed token has max prob, then do argmax generation, otherwise do sample
         for i in range(len(scores)):
             if scores[i].argmax() in allowed_tokens:
-                scores[i, scores[i].argmax()] = 99999
+                scores[i, scores[i].argmax()] = 9999
 
         return scores / temperature
 
     @staticmethod
     def topk_wrapper(scores: torch.FloatTensor, top_k: int) -> torch.FloatTensor:
         if top_k > 0:
-            filter_value = -99999
+            filter_value = -9999
             indices_to_remove = scores < torch.topk(scores, top_k)[0][..., -1, None]
+            # filter_value = -1e+30 if indices_to_remove.dtype == torch.float32 else -1e+4
             scores = scores.masked_fill(indices_to_remove, filter_value)
         # else do nothing
         return scores
