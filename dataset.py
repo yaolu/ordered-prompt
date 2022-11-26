@@ -9,12 +9,11 @@ import logging
 from collections import defaultdict
 from transformers import AutoTokenizer
 from torch.utils.data import DataLoader
-from model import ImmutableLM
 from tqdm import tqdm
 
 from itertools import permutations
 
-from utils import corpus_sampling, create_prompt, get_model_prefix
+from utils import corpus_sampling, create_prompt, get_model_prefix, get_model_tokenizer
 
 import debugger
 
@@ -31,8 +30,10 @@ class PromptCorpus:
                  sample_mode="balance", permutation_max_size=24, sentence_pair=False):
 
         prefix = get_model_prefix(tokenizer_path)
+        tokenizer_full_path = prefix + '/' + tokenizer_path
+        tokenizer_full_path = get_model_tokenizer(tokenizer_full_path)
 
-        self.tokenizer = AutoTokenizer.from_pretrained(prefix+tokenizer_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_full_path)
         self.kshot = n_shot
         self.max_sequence_length = 1022
 

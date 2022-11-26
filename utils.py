@@ -8,8 +8,17 @@ from collections import defaultdict
 def get_model_prefix(model_name):
     if 'gpt2' in model_name:
         return ''
+    elif 'bloom' in model_name:
+        return 'bigscience/'
+    elif model_name == 'sharded-gpt-j-6B':
+        return 'sgugger/'
+    elif 'gpt-j-6B-8bit-sharded' in model_name:
+        return 'ethzanalytics/'
     else:
         return 'EleutherAI/'
+
+def get_model_tokenizer(model_name):
+    return 'EleutherAI/gpt-j-6B' if 'gpt-j-6B' in model_name else model_name
 
 def compute_acc(prediction, gtruth):
     correct_counter = 0
