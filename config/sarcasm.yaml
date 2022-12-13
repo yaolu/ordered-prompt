@@ -1,0 +1,10 @@
+train_data_path: "data/sarcasm/train.jsonl"
+test_data_path: "data/sarcasm/dev_subsample.jsonl"
+tokenizer_path: "distilgpt2"
+n_shot: 1
+label_mapping: {'0': 'False', '1': 'True'}
+corpus_params: {'sentence_1_str': 'headline', 'label_str': 'is_sarcastic'}
+template: "f'input: {sentence_1}\\nis sarcastic: {label_text}\\n\\n'"
+sample_mode: "balance"
+sentence_pair: False
+permutation_max_size: 24

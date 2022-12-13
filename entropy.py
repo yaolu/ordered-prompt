@@ -30,7 +30,7 @@ def selection(fn_gen, fn_true, topk=4):
     all_labels.sort()
 
     entropys = []
-    for i in range(24):
+    for i in range(len(prediction_texts)):
         dist = []
         labeltext2freq = Counter(prediction_texts[i])
         for label in all_labels:
