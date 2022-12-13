@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:1024,garbage_collection_threshold:0.01'
+
 MAIN_DIR=$(pwd)
 DATASET=rte
 LOGDIR=experiment/$DATASET;
@@ -12,9 +14,9 @@ mkdir -p $LOGDIR
 for NSHOT in 4;
 do
 
-for MODEL in gpt2 gpt2-medium gpt2-large gpt2-xl gpt-neo-125M gpt-neo-1.3B gpt-neo-2.7B;
+for MODEL in gpt2 gpt2-medium gpt2-large gpt2-xl gpt-neo-125M gpt-neo-1.3B gpt-neo-2.7B sharded-gpt-j-6B;
 do
-for SEED in 3 5;
+for SEED in 1 2 4;
 do
 
   for N in 3 5;

@@ -14,15 +14,16 @@ class ImmutableLM(nn.Module):
         model_path = prefix + model_name
         print('model_path', model_path)
 
-        max_memory_mapping={
-            0: "1GB", 1: "40GB", 2: "40GB", 3: "40GB", 4: "40GB", 5: "40GB", 6: "40GB", 7: "40GB"
-        }
+        # Optional: Configurable per-GPU max memory usage cap
+        # max_memory_mapping={
+        #     0: "18GB", 1: "22GB", # 2: "40GB", 3: "40GB", 4: "40GB", 5: "40GB", 6: "40GB", 7: "40GB"
+        # }
 
         self.backbone = AutoModelForCausalLM.from_pretrained(
             model_path,
-            device_map='balanced_low_0',
-            max_memory=max_memory_mapping,
+            device_map='auto',
             load_in_8bit=True,
+            # max_memory=max_memory_mapping,
         )
         tokenizer = get_model_tokenizer(model_path)
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer)

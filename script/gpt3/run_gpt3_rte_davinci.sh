@@ -6,7 +6,7 @@ NSHOT=4
 LOGDIR=experiment/${DATASET}
 
 
-for SEED in 1;
+for SEED in 3;
 
 
 do

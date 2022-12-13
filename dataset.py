@@ -30,7 +30,7 @@ class PromptCorpus:
                  sample_mode="balance", permutation_max_size=24, sentence_pair=False):
 
         prefix = get_model_prefix(tokenizer_path)
-        tokenizer_full_path = prefix + '/' + tokenizer_path
+        tokenizer_full_path = prefix + tokenizer_path
         tokenizer_full_path = get_model_tokenizer(tokenizer_full_path)
 
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_full_path)
